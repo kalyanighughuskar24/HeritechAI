@@ -4,7 +4,7 @@ HeritechAI is an AI-powered web platform developed to create a smart and interac
 
 This project is developed using PHP, MySQL, HTML, CSS, JavaScript, and XAMPP as the local server environment.
 
----
+
 
 # 🌟 Project Overview
 
@@ -22,7 +22,7 @@ The platform includes:
 
 The project follows a modular structure for easy maintenance and scalability.
 
----
+
 
 # 🚀 Features
 
@@ -62,7 +62,7 @@ The project follows a modular structure for easy maintenance and scalability.
 - Modern Layout
 - Easy Navigation
 
----
+
 
 # 🛠️ Technologies Used
 
@@ -75,7 +75,6 @@ The project follows a modular structure for easy maintenance and scalability.
 | JavaScript | Interactivity |
 | XAMPP | Local Server Environment |
 
----
 
 # 📂 Project Structure
 
@@ -100,7 +99,7 @@ HeritechAI/
 ├── contact_process.php    # Contact form processing
 │
 └── README.md              # Project documentation
-```
+
 
 # 🔐 Security Features
 
