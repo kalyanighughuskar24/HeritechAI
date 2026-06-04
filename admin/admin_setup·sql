@@ -1,0 +1,37 @@
+-- ============================================================
+-- AI Community – Admin Panel Database Setup
+-- Run these queries in your phpMyAdmin or MySQL terminal
+-- ============================================================
+
+-- 1. Add reject_reason column to content table (if not exists)
+ALTER TABLE content 
+ADD COLUMN IF NOT EXISTS reject_reason TEXT DEFAULT NULL AFTER status;
+
+-- 2. Make sure the content table has the correct status column with the right ENUM values
+-- (Skip this if your column already works fine – it's just for reference)
+-- ALTER TABLE content MODIFY COLUMN status ENUM('pending','approved','rejected') DEFAULT 'pending';
+
+-- 3. Create an ADMIN user account
+--    Replace the values below with your chosen email and a bcrypt hash of your password.
+--    You can generate a bcrypt hash at: https://bcrypt-generator.com/ (Cost: 10)
+--
+--    Example: password = Admin@123
+--    Hash below is for "Admin@123" – CHANGE IT to your own password hash!
+
+INSERT INTO users (name, email, password, role, is_verified)
+VALUES (
+  'Admin',
+  'admin@aicommunity.com',
+  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',  -- password: "password"
+  'admin',
+  1
+);
+
+-- *** IMPORTANT: After inserting, log in and change your password immediately! ***
+-- Or generate a proper hash for your password using PHP:
+--   echo password_hash('YourPassword123', PASSWORD_DEFAULT);
+-- Then update:
+-- UPDATE users SET password='<your_hash>' WHERE email='admin@aicommunity.com';
+
+-- 4. Verify the insert
+SELECT id, name, email, role, is_verified FROM users WHERE role='admin';
