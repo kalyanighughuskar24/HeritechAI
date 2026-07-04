@@ -4,7 +4,7 @@ HeritechAI is an AI-powered web platform developed to create a smart and interac
 
 This project is developed using PHP, MySQL, HTML, CSS, JavaScript, and XAMPP as the local server environment.
 
-
+🔗 **Live Demo:** [heritechai.infinityfreeapp.com](https://heritechai.infinityfreeapp.com)
 
 # 🌟 Project Overview
 
